@@ -1,0 +1,347 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/grey" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_margin="@dimen/frame_layout_margin"
+        android:layout_weight="0.1" >
+        
+			<TextView
+			    android:id="@+id/tvResumeTitle"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center_vertical"
+			    android:text="RUNNING COSTS:"
+			    android:layout_marginLeft="@dimen/frame_layout_margin"
+			    android:textColor="@color/dark_grey"
+			    android:textSize="@dimen/meters_title"
+			    android:textStyle="bold" />
+			
+			<TextView
+			    android:id="@+id/tvResumeCost"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center_vertical"
+			    android:text="45"
+			    android:layout_marginLeft="@dimen/frame_layout_margin"
+			    android:textColor="@color/dark_grey"
+			    android:textSize="@dimen/meters_title"
+			    android:textStyle="bold" />
+			
+			<TextView
+			    android:id="@+id/tvResumeLastMonth"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center_vertical"
+			    android:text="£"
+			    android:layout_marginLeft="@dimen/frame_layout_margin"
+			    android:textColor="@color/dark_grey"
+			    android:textSize="@dimen/meters_title"
+			    android:textStyle="bold" />
+        
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0.4" >
+
+        <RelativeLayout
+            android:id="@+id/layoutGas"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_margin="@dimen/frame_layout_margin"
+            android:layout_weight="0.5"
+            android:background="@color/white" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/gas" />
+            
+            <TextView
+                android:id="@+id/tvGasTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="GAS"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/meters_title"
+                android:textStyle="bold" />
+
+			<TextView
+			    android:id="@+id/tvGasValue"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_centerHorizontal="true"
+			    android:layout_below="@+id/tvGasTitle"
+			    android:text="1230"
+			    android:textColor="@color/dark_grey"
+			    android:textSize="@dimen/meters_title"
+			    android:textStyle="bold" />
+			
+            <TextView
+                android:id="@+id/tvGasUnits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tvGasValue"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/tvGasValue"
+                android:text="un"
+                android:textSize="@dimen/meters_cost_unit"/>
+
+			<TextView
+			    android:id="@+id/tvGasCost"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@+id/tvGasValue"
+			    android:layout_centerHorizontal="true"
+			    android:text="20"
+			    android:textSize="@dimen/meters_cost"
+			    android:textStyle="bold" />
+			
+            <TextView
+                android:id="@+id/tvGasCostUnits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tvGasCost"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/tvGasCost"
+                android:text="£"
+                android:textSize="@dimen/meters_cost_unit"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutElectricity"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_margin="@dimen/frame_layout_margin"
+            android:layout_weight="0.5"
+            android:background="@color/white" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/electricity" />
+            
+            <TextView
+                android:id="@+id/tvElectricityTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="ELECTRIC"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/meters_title"
+                android:textStyle="bold" />
+
+			<TextView
+			    android:id="@+id/tvElectricityValue"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_centerHorizontal="true"
+			    android:layout_below="@+id/tvElectricityTitle"
+			    android:layout_centerVertical="true"
+			    android:text="1230"
+			    android:textSize="@dimen/meters_title"
+			    android:textStyle="bold" />
+			
+            <TextView
+                android:id="@+id/tvElectricityUnits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tvElectricityValue"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/tvElectricityValue"
+                android:text="kWh"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            
+			<TextView
+			    android:id="@+id/tvElectricityCost"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@+id/tvElectricityValue"
+			    android:layout_centerHorizontal="true"
+			    android:text="20"
+			    android:textSize="@dimen/meters_cost"
+			    android:textStyle="bold" />
+			
+            <TextView
+                android:id="@+id/tvElectricityCostUnits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tvElectricityCost"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/tvElectricityCost"
+                android:text="£"
+                android:textSize="@dimen/meters_cost_unit"/>
+            
+            
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4" >
+        
+        <RelativeLayout
+            android:id="@+id/layoutWater"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_margin="@dimen/frame_layout_margin"
+            android:layout_weight="0.5"
+            android:background="@color/white" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/water" />
+            
+            <TextView
+                android:id="@+id/tvWaterTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="WATER"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/meters_title"
+                android:textStyle="bold" />
+
+			<TextView
+			    android:id="@+id/tvWaterValue"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_centerHorizontal="true"
+			    android:layout_below="@+id/tvWaterTitle"
+			    android:layout_centerVertical="true"
+			    android:text="1230"
+			    android:textSize="@dimen/meters_title"
+			    android:textStyle="bold" />
+			
+            <TextView
+                android:id="@+id/tvWaterUnits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tvWaterValue"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/tvWaterValue"
+                android:text="m3"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            
+			<TextView
+			    android:id="@+id/tvWaterCost"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@+id/tvWaterValue"
+			    android:layout_centerHorizontal="true"
+			    android:text="20"
+			    android:textSize="@dimen/meters_cost"
+			    android:textStyle="bold" />
+			
+            <TextView
+                android:id="@+id/tvWaterCostUnits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tvWaterCost"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/tvWaterCost"
+                android:text="£"
+                android:textSize="@dimen/meters_cost_unit"/>
+
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/layoutFixed"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_margin="@dimen/frame_layout_margin"
+            android:layout_weight="0.5"
+            android:background="@color/white" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/fixed" />
+            
+            <TextView
+                android:id="@+id/tvFixedTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="FIXED"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/meters_title"
+                android:textStyle="bold" />
+            
+            <TextView
+                android:id="@+id/tvFixedValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvFixedTitle"
+                android:layout_centerHorizontal="true"
+                android:text="TAX"
+                android:textSize="@dimen/meters_title"
+                android:textStyle="bold" />
+			
+            <TextView
+                android:id="@+id/tvFixedUnits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tvFixedValue"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/tvFixedValue"
+                android:text="£"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            
+			<TextView
+			    android:id="@+id/tvFixedCost"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@+id/tvFixedValue"
+			    android:layout_centerHorizontal="true"
+			    android:text="20"
+			    android:textSize="@dimen/meters_cost"
+			    android:textStyle="bold" />
+			
+            <TextView
+                android:id="@+id/tvWaterCostUnits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tvFixedCost"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/tvFixedCost"
+                android:text="£"
+                android:textSize="@dimen/meters_cost_unit"/>
+
+
+
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>
